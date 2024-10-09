@@ -1,7 +1,19 @@
-<script setup></script>
+<script setup>
+defineProps({
+    modelValue: {
+        type: String,
+        default: '',
+    },
+})
+const emit = defineEmits(['update:modelValue'])
+
+const updateCategory = (event) => {
+    emit('update:modelValue', event.target.value)
+}
+</script>
 
 <template>
-    <select class="border p-2">
+    <select :value="modelValue" class="border p-2" @input="updateCategory">
         <option disabled value="">Select Category</option>
         <option value="Work">Work</option>
         <option value="Personal">Personal</option>
