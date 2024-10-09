@@ -7,6 +7,6 @@ export default [
     { files: ['**/*.{js,mjs,cjs,vue}'] },
     { languageOptions: { globals: globals.browser } },
     pluginJs.configs.recommended,
-    ...pluginVue.configs['flat/recommended'],
+    ...pluginVue.configs['flat/base'],
     eslintConfigPrettier,
 ]

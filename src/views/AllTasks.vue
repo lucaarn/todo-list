@@ -2,6 +2,7 @@
 import CatergorySelector from '../components/CatergorySelector.vue'
 import { ref } from 'vue'
 import { allTasks, taskData } from '../tasks.js'
+import TaskList from '../components/TaskList.vue'
 
 const newTask = ref()
 const selectedCategory = ref()
@@ -29,6 +30,7 @@ const addTask = () => {
     <button class="bg-green-500 text-white px-4 py-2 rounded" @click="addTask">
         Add Task
     </button>
+    <TaskList :tasks="tasks" />
 </template>
 
 <style scoped></style>

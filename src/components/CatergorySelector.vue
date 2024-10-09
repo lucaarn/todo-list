@@ -1,10 +1,5 @@
 <script setup>
-defineProps({
-    modelValue: {
-        type: String,
-        default: '',
-    },
-})
+defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
 
 const updateCategory = (event) => {
