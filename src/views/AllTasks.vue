@@ -1,5 +1,5 @@
 <script setup>
-import CatergorySelector from '../components/CatergorySelector.vue'
+import CategorySelector from '../components/CategorySelector.vue'
 import { ref } from 'vue'
 import { allTasks, taskData } from '../tasks.js'
 import TaskList from '../components/TaskList.vue'
@@ -26,7 +26,7 @@ const addTask = () => {
     <h1 class="text-2xl mb-6">All Tasks</h1>
 
     <input v-model="newTask" placeholder="New Task" class="border p-2 mb-4" />
-    <CatergorySelector v-model="selectedCategory" />
+    <CategorySelector v-model="selectedCategory" />
     <button class="bg-green-500 text-white px-4 py-2 rounded" @click="addTask">
         Add Task
     </button>
