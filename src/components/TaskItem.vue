@@ -1,5 +1,8 @@
 <script setup>
-defineProps(['task'])
+const props = defineProps(['task', 'onDelete'])
+const removeTask = () => {
+    props.onDelete(props.task.id)
+}
 </script>
 
 <template>
@@ -10,6 +13,7 @@ defineProps(['task'])
             <input v-model="task.completed" type="checkbox" class="mr-2" />
             {{ task.title }} ({{ task.category }})
         </div>
+        <button @click="removeTask" class="text-red-500">Delete</button>
     </div>
 </template>
 
