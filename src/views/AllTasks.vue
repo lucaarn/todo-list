@@ -29,7 +29,7 @@ const addTask = () => {
 <template>
     <h1 class="text-2xl mb-6">All Tasks</h1>
 
-    <div class="flex space-x-1 h-10">
+    <div class="flex space-x-1 h-10 mb-6">
         <input
             v-model="newTask"
             placeholder="New Task"
