@@ -7,13 +7,13 @@ const taskData = reactive({
         ? storedTasks
         : [
               {
-                  id: 1,
+                  id: crypto.randomUUID(),
                   title: 'Finish application',
                   category: 'Work',
                   completed: false,
               },
               {
-                  id: 2,
+                  id: crypto.randomUUID(),
                   title: 'Go shopping',
                   category: 'Personal',
                   completed: true,

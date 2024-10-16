@@ -11,7 +11,7 @@ const tasks = allTasks
 const addTask = () => {
     if (newTask.value && selectedCategory.value) {
         taskData.tasks.push({
-            id: Date.now(),
+            id: crypto.randomUUID(),
             title: newTask.value,
             category: selectedCategory.value,
             completed: false,
