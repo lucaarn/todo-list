@@ -11,6 +11,7 @@ const removeTask = () => {
     >
         <div :class="{ 'line-through': task.completed }">
             <input v-model="task.completed" type="checkbox" class="mr-2" />
+            [{{ new Date(task.dueDate).toLocaleDateString() }}]
             {{ task.title }} ({{ task.category }})
         </div>
         <button @click="removeTask" class="text-red-500">Delete</button>
